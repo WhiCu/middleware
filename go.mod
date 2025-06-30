@@ -1,4 +1,4 @@
-module github.com/whiCu/middleware
+module github.com/WhiCu/middleware
 
 go 1.24.3
 
