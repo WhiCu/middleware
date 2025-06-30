@@ -1,7 +1,6 @@
 package circuit
 
 import (
-	"log"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -115,8 +114,6 @@ func (cb *CircuitBreaker) transitionTo(newState CircuitBreakerState) {
 	}
 
 	cb.state.Store(int32(newState))
-
-	log.Printf("[CircuitBreaker] State transition: %s -> %s", oldState, newState)
 
 	switch newState {
 	case StateOpen:
